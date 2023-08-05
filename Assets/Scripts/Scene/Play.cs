@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Play : MonoBehaviour
 {
+    [SerializeField] Screen screen;
+
     GameInputs gameInputs;
 
     /// <summary>
@@ -12,7 +14,8 @@ public class Play : MonoBehaviour
     /// </summary>
     void OnSelected(InputAction.CallbackContext context)
     {
-        SceneChanger.Instance.LoadSceneFaded("Thankyou");
+        //SceneChanger.Instance.LoadSceneFaded("Thankyou");
+        screen.StartScreen();
     }
 
     void Start()
